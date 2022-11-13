@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get "about-us", to: "about#index", as: "about"
   get "signup", to: "registrations#new"
   post "signup", to: "registrations#create"
+  delete "logout", to: "sessions#destroy"
 end
