@@ -41,3 +41,7 @@ yarn-debug.log*
 
 
 .idea/
+
+twitter_secret.txt
+twitter_client_secret.txt
+/config/credentials/development.key
