@@ -9,7 +9,9 @@
     <% if tweet.published? %>
     <%= link_to "View tweet", "https://twitter.com/#{tweet.twitter_account.username}/satus/#{tweet.tweet_id}" , target: :_blank %>
       <% else %>
-      Scheduled for  <span class="fw-bold"><%= l tweet.publish_at, format: :long %></span>
+      <p>Scheduled for  <span class="fw-bold"><%= l tweet.publish_at, format: :long %></span></p>
+      <%= link_to "Edit",edit_tweet_path(tweet), class: "btn btn-outline-primary" %>
+      <%= link_to "Delete",tweet_path(tweet), method: :delete ,class: "btn btn-outline-danger", data: {confirm: "Are you sure?" }  %>
     <%end %>
   </div>
   </div>
