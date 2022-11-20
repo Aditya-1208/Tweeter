@@ -75,7 +75,7 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.action_mailer.default_url_options = {host: "localhost:3000"}
-
+  config.active_job.queue_adapter = :sidekiq
   config.time_zone = "Kolkata"
 
 end

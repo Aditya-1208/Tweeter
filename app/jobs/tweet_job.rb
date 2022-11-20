@@ -3,7 +3,6 @@ class TweetJob < ApplicationJob
 
   def perform(tweet)
     # many updates on tweet => schedule multiple jobs, but we'll run only latest time
-    binding.irb
     return if (tweet.published? || tweet.publish_at > Time.current)
     tweet.publish_to_twitter!
   end
